@@ -1,0 +1,38 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 2,
+ start_date = '2018-04-25_00:00:00', '2018-04-25_00:00:00', '2019-09-22_18:00:00',
+ end_date   = '2018-04-30_00:00:00', '2018-04-30_00:00:00', '2019-09-23_06:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,   1, 2,
+ parent_grid_ratio =   1,   10, 3,
+ i_parent_start    =   1,  9, 35,
+ j_parent_start    =   1,  9, 35,
+ e_we              =  41, 221, 100,
+ e_sn              =  41, 221, 163,
+ geog_data_res     = '30s','30s','30s',
+ dx = 50000,
+ dy = 50000,
+ map_proj = 'mercator',
+ ref_lat   =  18.50,
+ ref_lon   =  104.57,
+ truelat1  =  18.50,
+ truelat2  =  0,
+ stand_lon =  104.57,
+ geog_data_path = '/root/WRF-CORDEX/WRFV4/DATA/WPS_GEOG/'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2, 
+/
+
